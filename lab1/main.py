@@ -1,16 +1,28 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import random
+import statistics
+import math
+from gmpy2 import mpz
 
 
-# Press the green button in the gutter to run the script.
+def series_sum():
+    sum = ((0 + 999999) / 2) * (999999 + 1)
+    print(sum)
+    the_mean_series(sum)
+
+
+def the_mean_series(sum):
+    mean = sum / 2
+    print(mean)
+
+
+def median_product_arr():
+    array = []
+    for i in range(0, 1000000):
+        array.append(random.randint(1, 10))
+    print(statistics.median(array))
+    print(mpz(math.prod(array)))
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    series_sum()
+    median_product_arr()
