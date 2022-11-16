@@ -9,6 +9,7 @@ def show_input_menu():
     print("[1] - Добавить в массив элемент с заданным диапазоном\n"
           "[2] - Добавить в массив элемент заполненный случайными числами\n"
           "[3] - Вывести все элементы\n"
+          "[4] - Удалить элемент\n"
           "[0] - Выход")
 
 
@@ -30,14 +31,13 @@ class Menu:
 
     def tojson(self):
         dump = json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
-        print(dump)
         with open('json_data.json', 'w') as outfile:
-            outfile.write(str(dump))
+            outfile.write(dump)
 
     def show_array(self):
         i = 0
         for temp in self.mas:
-            print("[" + str(i) + "] -", end='')
+            print("[" + str(i) + "] - ", end='')
             temp.show_arr()
             i = i + 1
         print()
