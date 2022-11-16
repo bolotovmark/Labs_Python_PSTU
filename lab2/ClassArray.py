@@ -8,7 +8,7 @@ class IntArray:
         self.arr = []
 
     def diapason(self, a, b):
-        for i in range(a, b+1):
+        for i in range(a, b + 1):
             self.arr.append(i)
 
     def random(self, n):
@@ -16,9 +16,10 @@ class IntArray:
             self.arr.append(random.randint(0, 100))
 
     def show_arr(self):
-        print("[ ")
+        print("[ ", end='')
         for temp in self.arr:
-            print(temp + " ")
+            print(temp, end=' ')
+        print("] ")
 
-    def __del__(self):
-        print("Массив очищен!")
+    def json_to_class(self, value):
+        self.arr.append(int(value))
