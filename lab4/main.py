@@ -17,4 +17,5 @@ print(fact_list)
 
 data = load_digits()
 dictionary_wine = list(map(lambda temp: str(temp), data.target_names))
+
 print(dictionary_wine)
